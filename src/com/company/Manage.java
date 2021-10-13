@@ -3,10 +3,10 @@ package com.company;
 import java.util.Scanner;
 
 public class Manage {
+    public Product[] listProduct;
 
-    public void inputProduct() {
-    }
-    public void input(Product[] listProduct) {
+    public void inputProduct(Product[] listProduct) {
+        this.listProduct = listProduct;
         for (int i = 0; i < listProduct.length; i++) {
             Scanner sc = new Scanner(System.in);
             System.out.println("nhập vào tên sản phẩm:");
@@ -26,12 +26,14 @@ public class Manage {
     }
 
     public void output(Product[] listProduct) {
+        this.listProduct = listProduct;
         for (Product product : listProduct) {
             System.out.println(product);
         }
     }
 
     public int sumPrice(Product[] listProduct) {
+        this.listProduct = listProduct;
         int sum = 0;
         for (Product product : listProduct) {
             sum += product.getPrice();
@@ -40,6 +42,7 @@ public class Manage {
     }
 
     public void searchBook(Product[] listProduct) {
+        this.listProduct = listProduct;
         Scanner sc = new Scanner(System.in);
         System.out.println("nhập tên sách cần tìm ");
         String nameb = sc.nextLine();
@@ -60,6 +63,7 @@ public class Manage {
     }
 
     public void editProduct( Product[] listProduct) {
+        this.listProduct = listProduct;
         Scanner sc = new Scanner(System.in);
         System.out.println("nhập vào vị trí muốn sửa");
         int index = sc.nextInt();
@@ -85,6 +89,7 @@ public class Manage {
     }
 
     public void deleteProduct( Product[] listProduct) {
+        this.listProduct = listProduct;
         Scanner sc = new Scanner(System.in);
         System.out.println("nhập vào vị trí muốn sửa");
         int index = sc.nextInt();

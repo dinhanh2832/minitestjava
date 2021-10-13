@@ -9,7 +9,7 @@ public class Main {
         int size = sc.nextInt();
         Product[] listProduct = new Product[size];
         Manage manage = new Manage();
-        manage.input(listProduct);
+        manage.inputProduct(listProduct);
         manage.output(listProduct);
         manage.searchBook(listProduct);
         manage.editProduct( listProduct);
