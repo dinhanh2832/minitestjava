@@ -7,7 +7,7 @@ public class Manage {
 
     public void inputProduct(Product[] listProduct) {
         this.listProduct = listProduct;
-        for (int i = 0; i < listProduct.length; i++) {
+        for (int i = 0; i < this.listProduct.length; i++) {
             Scanner sc = new Scanner(System.in);
             System.out.println("nhập vào tên sản phẩm:");
             String name = sc.nextLine();
@@ -35,7 +35,7 @@ public class Manage {
     public int sumPrice(Product[] listProduct) {
         this.listProduct = listProduct;
         int sum = 0;
-        for (Product product : listProduct) {
+        for (Product product : this.listProduct) {
             sum += product.getPrice();
         }
         return sum;
@@ -56,7 +56,7 @@ public class Manage {
         }
         if (check) {
             System.out.println(listProduct[index]);
-            System.out.println(index);
+            System.out.println("ở vị trí số: " + index);
         } else {
             System.out.println("not in the list");
         }
@@ -74,6 +74,7 @@ public class Manage {
                 System.out.println("nhập vào mã sản phẩm:");
                 double code = sc.nextDouble();
                 System.out.println("nhập vào loại:");
+                sc.nextLine();
                 String type = sc.nextLine();
                 System.out.println("nhập vào đơn vị tiền:");
                 String currency = sc.nextLine();
